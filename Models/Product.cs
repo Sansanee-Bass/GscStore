@@ -16,13 +16,6 @@ namespace GscStore.Models
 
         public int Quantity { get; set; }
 
-
-
-
-
-
-
-
     }
 
 }
