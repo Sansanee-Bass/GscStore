@@ -7,6 +7,10 @@ for details on configuring this project to bundle and minify static web assets. 
   background-color: rgb(19, 207, 198);
 }
 
+body {
+  background-color: rgb(240, 230, 230);
+}
+
 .text {
   background-color: rgb(255, 230, 0);
   font-size: 25px;
