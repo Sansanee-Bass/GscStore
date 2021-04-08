@@ -19,9 +19,7 @@ namespace GscStore.Models
         [DataType(DataType.ImageUrl)]
         public string Picture { get; set; }
 
-
-        public int Quantity { get; set; }
-
+        public uint Stock { get; set; }
     }
 
 }
