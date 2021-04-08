@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace GscStore.Pages
 {
-    public class PrivacyModel : PageModel
+    public class LocationModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<LocationModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public LocationModel(ILogger<LocationModel> logger)
         {
             _logger = logger;
         }
