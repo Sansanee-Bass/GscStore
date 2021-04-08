@@ -29,8 +29,6 @@ namespace GscStore
             services.AddDbContext<GscStoreContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("GscStoreContext")));
 
-            services.AddDbContext<StoreGameContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("StoreGameContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
