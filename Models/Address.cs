@@ -6,7 +6,7 @@ namespace GscStore.Models
 {
     public class Delivery
     {
-        public int OrderId { get; set; }
+        public int AddressId { get; set; }
 
         public string Name { get; set; }
 
@@ -15,9 +15,10 @@ namespace GscStore.Models
         public string City { get; set; }
 
         public string Province { get; set; }
+
         public int Postcode { get; set; }
 
-
+        public virtual Order Order { get; set; }
 
     }
 

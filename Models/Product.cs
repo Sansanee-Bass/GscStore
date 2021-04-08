@@ -9,7 +9,6 @@ namespace GscStore.Models
         public int ProductId { get; set; }
         [Required]
         public string Name { get; set; }
-
         public string Description { get; set; }
 
         [DataType(DataType.Currency)]
