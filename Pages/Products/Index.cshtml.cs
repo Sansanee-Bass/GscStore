@@ -11,6 +11,8 @@ namespace GscStore.Pages.Products
 {
     public class IndexModel : PageModel
     {
+        [BindProperty(SupportsGet = true)]
+        public string SearchItem { get; set; }
         private readonly GscStoreContext _context;
 
         public IndexModel(GscStoreContext context)
@@ -18,7 +20,7 @@ namespace GscStore.Pages.Products
             _context = context;
         }
 
-        public IList<Product> Product { get;set; }
+        public IList<Product> Product { get; set; }
 
         public async Task OnGetAsync()
         {

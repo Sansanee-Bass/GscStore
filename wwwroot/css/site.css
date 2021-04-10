@@ -1,6 +1,14 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+h1 {
+  text-align: center;
+}
+
+.pic {
+  margin-left: 20vw;
+}
+
 .display-4 {
   color: rgb(21, 21, 226);
   font-family: fantasy;
@@ -22,9 +30,17 @@ body {
 }
 
 a.navbar-brand {
-  white-space: normal;
   text-align: center;
   word-break: break-all;
+  white-space: normal;
+}
+
+a.nav-link.text-dark {
+  text-align: right;
+}
+
+a.nav-link:hover {
+  background-color: rgb(142, 185, 235);
 }
 
 /* Provide sufficient contrast against white background */
@@ -52,7 +68,7 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 668px) {
   html {
     font-size: 16px;
   }
@@ -85,7 +101,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .footer {

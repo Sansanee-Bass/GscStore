@@ -3,13 +3,26 @@
 
 @{
     ViewData["Title"] = "Index";
+    ViewData["ShowButtons"] = true;
 }
-
+<style>
+    .btn {
+        width: 65px;
+    }
+</style>
 <h1>Product</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form method="get">
+    <div class="input-group">
+        <input class="from-control" asp-for="SearchItem" />
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
