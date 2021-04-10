@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using GscStore.Models;
 
+
 public class GscStoreContext : DbContext
 {
     //public virtual DbSet<Product> Products { get; set; }
