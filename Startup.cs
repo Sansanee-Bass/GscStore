@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using GscStore.Models;
+
 
 namespace GscStore
 {
@@ -26,9 +28,13 @@ namespace GscStore
         {
             services.AddRazorPages();
 
-            services.AddDbContext<GscStoreContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("GscStoreContext")));
+            services.AddDbContext<GscStoreContext>(option =>
+                    option.UseSqlite(
+                        Configuration.GetConnectionString("Gscconn")));
 
+            services.AddDefaultIdentity<AdminUser>(option =>
+            option.SignIn.RequireConfirmedAccount = true
+            ).AddEntityFrameworkStores<GscStoreContext>();
 
         }
 
@@ -50,7 +56,7 @@ namespace GscStore
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
