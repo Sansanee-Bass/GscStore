@@ -11,9 +11,9 @@ namespace GscStore.Pages.Products
 {
     public class DeleteModel : PageModel
     {
-        private readonly GscStoreContext _context;
+        private readonly GscStore.Models.GscStoreContext _context;
 
-        public DeleteModel(GscStoreContext context)
+        public DeleteModel(GscStore.Models.GscStoreContext context)
         {
             _context = context;
         }
@@ -28,7 +28,7 @@ namespace GscStore.Pages.Products
                 return NotFound();
             }
 
-            Product = await _context.Product.FirstOrDefaultAsync(m => m.ProductId == id);
+            Product = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
 
             if (Product == null)
             {
@@ -44,11 +44,11 @@ namespace GscStore.Pages.Products
                 return NotFound();
             }
 
-            Product = await _context.Product.FindAsync(id);
+            Product = await _context.Products.FindAsync(id);
 
             if (Product != null)
             {
-                _context.Product.Remove(Product);
+                _context.Products.Remove(Product);
                 await _context.SaveChangesAsync();
             }
 

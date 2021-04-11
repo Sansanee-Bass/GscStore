@@ -11,9 +11,9 @@ namespace GscStore.Pages.Products
 {
     public class DetailsModel : PageModel
     {
-        private readonly GscStoreContext _context;
+        private readonly GscStore.Models.GscStoreContext _context;
 
-        public DetailsModel(GscStoreContext context)
+        public DetailsModel(GscStore.Models.GscStoreContext context)
         {
             _context = context;
         }
@@ -27,7 +27,7 @@ namespace GscStore.Pages.Products
                 return NotFound();
             }
 
-            Product = await _context.Product.FirstOrDefaultAsync(m => m.ProductId == id);
+            Product = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
 
             if (Product == null)
             {

@@ -11,9 +11,9 @@ namespace GscStore.Pages.Products
 {
     public class CreateModel : PageModel
     {
-        private readonly GscStoreContext _context;
+        private readonly GscStore.Models.GscStoreContext _context;
 
-        public CreateModel(GscStoreContext context)
+        public CreateModel(GscStore.Models.GscStoreContext context)
         {
             _context = context;
         }
@@ -34,7 +34,7 @@ namespace GscStore.Pages.Products
                 return Page();
             }
 
-            _context.Product.Add(Product);
+            _context.Products.Add(Product);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -12,9 +12,9 @@ namespace GscStore.Pages.Products
 {
     public class EditModel : PageModel
     {
-        private readonly GscStoreContext _context;
+        private readonly GscStore.Models.GscStoreContext _context;
 
-        public EditModel(GscStoreContext context)
+        public EditModel(GscStore.Models.GscStoreContext context)
         {
             _context = context;
         }
@@ -29,7 +29,7 @@ namespace GscStore.Pages.Products
                 return NotFound();
             }
 
-            Product = await _context.Product.FirstOrDefaultAsync(m => m.ProductId == id);
+            Product = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
 
             if (Product == null)
             {
@@ -70,7 +70,7 @@ namespace GscStore.Pages.Products
 
         private bool ProductExists(int id)
         {
-            return _context.Product.Any(e => e.ProductId == id);
+            return _context.Products.Any(e => e.ProductId == id);
         }
     }
 }

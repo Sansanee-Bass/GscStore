@@ -4,7 +4,7 @@ namespace GscStore.Models
 {
     public class AdminUser : IdentityUser
     {
-        public string Address { get; set; } = "";
+        public string Address { get; set; } = "admin";
 
     }
 }
