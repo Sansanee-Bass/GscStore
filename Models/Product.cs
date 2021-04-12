@@ -19,6 +19,8 @@ namespace GscStore.Models
         public string Picture { get; set; }
 
         public uint Stock { get; set; }
+
+
     }
 
 }

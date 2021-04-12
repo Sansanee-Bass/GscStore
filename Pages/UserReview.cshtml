@@ -1,0 +1,11 @@
+@page
+@model UserReviewModel
+@{
+    ViewData["Title"] = "Service Review ";
+}
+<h1>@ViewData["Title"]</h1>
+<p>Enter Your Review</p>
+<form action="/UserReview" method="post" id="review">
+    <input type="text" id="txt" />
+    <input type="submit" value="Submit" />
+</form>
